@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'SahilHackerNewsApp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_46050357B04D4C21B440750CC1D7035C }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_666358F17D7B461391B08869186B90BF }}
           package: .
