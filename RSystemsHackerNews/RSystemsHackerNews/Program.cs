@@ -1,3 +1,4 @@
+using Microsoft.OpenApi.Models;
 using RSystemsHackerNews.API;
 using RSystemsHackerNews.Business.Interfaces;
 using RSystemsHackerNews.Business.Services;
@@ -10,15 +11,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.ConfigureSwaggerGen(setup =>
+builder.Services.AddSwaggerGen(options =>
 {
-    setup.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    options.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "Stories",
-        Version = "v1"
+        Title = "Hacker News API",
+        Version = "v1",
+        Description = "It will shows top stories",
     });
+
 });
+
 
 builder.Services.AddCors(options =>
 {
@@ -51,8 +54,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-
+app.UseSwagger();
+app.UseSwaggerUI(options =>
+{
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "Hacker News API v1");
+    options.RoutePrefix = "swagger";
+});
 
 
 app.UseHttpsRedirection();

@@ -22,7 +22,7 @@ public class IntegrationTests
     [Test]
     public async Task GetNewStories_ReturnsOkResult()
     {
-        var response = await _client.GetAsync("https://localhost:7095/api/Stories/NewStories");
+        var response = await _client.GetAsync("https://rsystemshackernewsapi.azurewebsites.net/api/Stories/NewStories");
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
         var data = JsonConvert.DeserializeObject<ApiResponse>(content);
