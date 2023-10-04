@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "RSystemsHackerNews.Data/1.0.0": {
+        "runtime": {
+          "RSystemsHackerNews.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RSystemsHackerNews.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\RSystemsHackerNews.API.props" />
+</Project>

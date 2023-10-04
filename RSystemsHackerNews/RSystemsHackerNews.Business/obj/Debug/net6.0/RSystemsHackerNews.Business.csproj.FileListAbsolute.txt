@@ -1,0 +1,15 @@
+D:\Assignments\RSystemsHackerNews\RSystemsHackerNews.Business\bin\Debug\net6.0\RSystemsHackerNews.Business.deps.json
+D:\Assignments\RSystemsHackerNews\RSystemsHackerNews.Business\bin\Debug\net6.0\RSystemsHackerNews.Business.dll
+D:\Assignments\RSystemsHackerNews\RSystemsHackerNews.Business\bin\Debug\net6.0\RSystemsHackerNews.Business.pdb
+D:\Assignments\RSystemsHackerNews\RSystemsHackerNews.Business\bin\Debug\net6.0\RSystemsHackerNews.Data.dll
+D:\Assignments\RSystemsHackerNews\RSystemsHackerNews.Business\bin\Debug\net6.0\RSystemsHackerNews.Data.pdb
+D:\Assignments\RSystemsHackerNews\RSystemsHackerNews.Business\obj\Debug\net6.0\RSystemsHackerNews.Business.csproj.AssemblyReference.cache
+D:\Assignments\RSystemsHackerNews\RSystemsHackerNews.Business\obj\Debug\net6.0\RSystemsHackerNews.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Assignments\RSystemsHackerNews\RSystemsHackerNews.Business\obj\Debug\net6.0\RSystemsHackerNews.Business.AssemblyInfoInputs.cache
+D:\Assignments\RSystemsHackerNews\RSystemsHackerNews.Business\obj\Debug\net6.0\RSystemsHackerNews.Business.AssemblyInfo.cs
+D:\Assignments\RSystemsHackerNews\RSystemsHackerNews.Business\obj\Debug\net6.0\RSystemsHackerNews.Business.csproj.CoreCompileInputs.cache
+D:\Assignments\RSystemsHackerNews\RSystemsHackerNews.Business\obj\Debug\net6.0\RSystemsHackerNews.Business.csproj.CopyComplete
+D:\Assignments\RSystemsHackerNews\RSystemsHackerNews.Business\obj\Debug\net6.0\RSystemsHackerNews.Business.dll
+D:\Assignments\RSystemsHackerNews\RSystemsHackerNews.Business\obj\Debug\net6.0\refint\RSystemsHackerNews.Business.dll
+D:\Assignments\RSystemsHackerNews\RSystemsHackerNews.Business\obj\Debug\net6.0\RSystemsHackerNews.Business.pdb
+D:\Assignments\RSystemsHackerNews\RSystemsHackerNews.Business\obj\Debug\net6.0\ref\RSystemsHackerNews.Business.dll
