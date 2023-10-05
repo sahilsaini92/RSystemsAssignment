@@ -1,7 +1,9 @@
-﻿using RSystemsHackerNews.Data;
+﻿using Newtonsoft.Json;
+using RSystemsHackerNews.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -38,6 +40,18 @@ namespace RSystemsHackerNews.Tests
                 TotalCount = 3
             };
             return apiResponse;
+        }
+
+        public static HttpResponseMessage GetStoryResponseMessage()
+        {
+            var data = GetStories();
+            string json = JsonConvert.SerializeObject(data);
+            var response = new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                Content = new StringContent(json, Encoding.UTF8, "application/json")
+            };
+
+            return response;
         }
     }
 }

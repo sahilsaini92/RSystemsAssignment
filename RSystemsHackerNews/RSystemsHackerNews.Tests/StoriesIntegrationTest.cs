@@ -19,6 +19,10 @@ public class IntegrationTests
         _client = new HttpClient();
     }
 
+    /// <summary>
+    /// Integration test for the actual hacker api data it covers all the methods including cache also
+    /// </summary>
+    /// <returns>passed or fail</returns>
     [Test]
     public async Task GetNewStories_ReturnsOkResult()
     {

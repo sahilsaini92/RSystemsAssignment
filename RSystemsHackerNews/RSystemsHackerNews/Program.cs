@@ -58,7 +58,6 @@ app.UseSwagger();
 app.UseSwaggerUI(options =>
 {
     options.SwaggerEndpoint("/swagger/v1/swagger.json", "Hacker News API v1");
-    options.RoutePrefix = "swagger";
 });
 
 

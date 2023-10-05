@@ -22,6 +22,13 @@ namespace RSystemsHackerNews.Business.Services
             _config = config.Value;
             _cache = cache;
         }
+        /// <summary>
+        /// Get the top 200 stories or stories based on the searched string
+        /// </summary>
+        /// <param name="searchText">Searched text from UI</param>
+        /// <param name="pageNumber">page number like 1,2 or 10</param>
+        /// <param name="pageSize">page size, for ex: 10,20 or 50</param>
+        /// <returns>Return the list of stories based on parameters</returns>
         public async Task<ApiResponse> GetStories(string searchText, int pageNumber, int pageSize)
         {
             IEnumerable<Task<Story>> tasks = Enumerable.Empty<Task<Story>>();
@@ -68,9 +75,14 @@ namespace RSystemsHackerNews.Business.Services
             return apiResponse;
         }
 
-        private async Task<Story> GetStoryAsync(int storyId)
+        /// <summary>
+        /// pass Story id to GetStoryByIdAsync method to get the response and convert that to story object
+        /// </summary>
+        /// <param name="storyId">story id got from hacker api</param>
+        /// <returns>Returns the Story based on id</returns>
+        public async Task<Story> GetStoryAsync(int storyId)
         {
-#pragma warning disable CS8603 
+#pragma warning disable CS8603
             return await _cache.GetOrCreateAsync<Story>(storyId, async cacheEntry =>
             {
                 var response = await GetStoryByIdAsync(storyId);
@@ -80,11 +92,16 @@ namespace RSystemsHackerNews.Business.Services
                     return JsonConvert.DeserializeObject<Story>(storyResponse);
                 }
 
-                return new Story(); 
+                return new Story();
             });
-#pragma warning restore CS8603 
+#pragma warning restore CS8603
         }
 
+        /// <summary>
+        /// Get story from hacker api based on story id
+        /// </summary>
+        /// <param name="id">story id from hacker api</param>
+        /// <returns>Returns the http response from hacker api</returns>
         public async Task<HttpResponseMessage> GetStoryByIdAsync(int id)
         {
             return await client.GetAsync(string.Format("{0}{1}", _config.HackerNewsBaseUrl, string.Format("item/{0}.json", id)));

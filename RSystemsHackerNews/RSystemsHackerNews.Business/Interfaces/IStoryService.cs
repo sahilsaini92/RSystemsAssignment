@@ -13,5 +13,7 @@ namespace RSystemsHackerNews.Business.Interfaces
 
         Task<HttpResponseMessage> GetStoryByIdAsync(int id);
 
+        Task<Story> GetStoryAsync(int storyId);
+
     }
 }

@@ -15,6 +15,10 @@ namespace RSystemsHackerNews.API.Controllers
             _storyService = storyService;
         }
 
+        /// <summary>
+        /// Api to get top 200 stories based on the parameters passed in HttpContext
+        /// </summary>
+        /// <returns>List of Stories</returns>
         [HttpGet("NewStories")]
         public async Task<IActionResult> GetNewStories()
         {
